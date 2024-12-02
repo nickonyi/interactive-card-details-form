@@ -1,3 +1,2 @@
-const varo = "declare";
-
-console.log(varo);
+const varo = 'rale';
+const saa = 'sa';
