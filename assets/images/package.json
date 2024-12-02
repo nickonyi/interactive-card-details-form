@@ -1,0 +1,13 @@
+{
+  "name": "images",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "commit": "git commit -m'just adding code'",
+    "push": "git push origin main"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
