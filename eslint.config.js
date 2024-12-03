@@ -1,35 +1,32 @@
-// @ts-nocheck
-const airbnbConfig = require('eslint-config-airbnb');
-const prettierConfig = require('eslint-config-prettier');
-const prettierPlugin = require('eslint-plugin-prettier');
-const pluginJs = require('@eslint/js');
-const globals = require('globals');
+const { FlatCompat } = require('@eslint/eslintrc');
+const path = require('path');
 
-console.log(airbnbConfig);
-console.log(prettierConfig);
+const compat = new FlatCompat({
+  baseDirectory: __dirname,
+});
 
 module.exports = [
+  ...compat.extends(
+    'eslint-config-airbnb',
+    'eslint-config-prettier',
+    'plugin:prettier/recommended',
+  ),
+
   {
     files: ['**/*.js'],
     languageOptions: {
-      sourceType: 'commonjs',
-      globals: globals.browser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+      },
+      globals: {
+        ...require('globals').browser,
+        ...require('globals').node,
+      },
     },
     rules: {
       'prettier/prettier': 'error',
       'no-console': 'warn',
     },
-    plugins: {
-      prettier: prettierPlugin,
-    },
-  },
-  {
-    ...airbnbConfig,
-  },
-  {
-    ...prettierConfig,
-  },
-  {
-    ...pluginJs.configs.recommended,
   },
 ];
