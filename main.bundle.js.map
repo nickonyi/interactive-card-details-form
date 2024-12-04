@@ -1,0 +1,1 @@
+{"version":3,"file":"main.bundle.js","mappings":"AAIAA,QAAQC,IAJK","sources":["webpack://images/./src/index.js"],"sourcesContent":["const varo = 'holla';\n\nconst dar = 'skaa';\n\nconsole.log(varo);\n"],"names":["console","log"],"sourceRoot":""}
