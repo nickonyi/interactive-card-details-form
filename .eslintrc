@@ -4,6 +4,7 @@
   "rules": {
     "prettier/prettier": "error",
     "no-unused-vars": "error",
+    "comma-dangle": ["none", "never"],
     "no-console": "off",
     "import/no-extraneous-dependencies": "off",
     "import/extensions": [
@@ -13,8 +14,8 @@
         "js": "always",
         "jsx": "never",
         "ts": "never",
-        "tsx": "never"
-      }
-    ]
-  }
+        "tsx": "never",
+      },
+    ],
+  },
 }
