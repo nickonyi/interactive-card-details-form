@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "add": "git add .",
     "dev": "webpack serve --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "commit": "git commit -m'Project initialization'",
+    "commit": "git commit -m'HTML and CSS setup'",
     "push": "git push origin main"
   },
   "keywords": [],
