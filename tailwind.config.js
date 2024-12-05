@@ -2,7 +2,11 @@
 module.exports = {
   content: [],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'hero-pattern': "url('./dist/assets/images/bg-main-desktop.png')",
+      },
+    },
   },
-  plugins: { tailwindcss: {}, autoprefixer: {} },
+  plugins: [],
 };
