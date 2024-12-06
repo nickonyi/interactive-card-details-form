@@ -21,8 +21,15 @@
   <body class="m-0">
     <div class="container flex h-screen flex-col sm:flex-row w-full">
       <div
-        class="bg-hero-mobile md:bg-hero-desktop h-100 bg-cover bg-center flex-1 basis-1/3"
-      ></div>
+        class="bg-hero-mobile md:bg-hero-desktop h-100 bg-cover bg-center flex-1 basis-1/3 relative"
+      >
+        <div
+          class="absolute top-1/4 left-64 rounded-md bg-hero-card-front h-36 w-64 bg-cover bg-center"
+        ></div>
+        <div
+          class="absolute top-80 left-3/4 rounded-md bg-hero-card-back h-36 w-64 bg-cover bg-center"
+        ></div>
+      </div>
       <div class="flex-3 basis-2/3 flex items-center justify-center">
         <div class="card-holder-container w-96">
           <form>
