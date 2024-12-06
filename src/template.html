@@ -37,8 +37,8 @@
                 type="text"
                 id="cardholder-name"
                 name="cardholder-name"
-                class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="John Doe"
+                class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+                placeholder="e.g. Jane Appleseed"
                 required
               />
             </div>
@@ -54,8 +54,8 @@
                 type="text"
                 id="card-number"
                 name="card-number"
-                class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="1234 5678 9012 3456"
+                class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+                placeholder="e.g. 1234 5678 9123 0000"
                 maxlength="19"
                 required
               />
@@ -67,18 +67,18 @@
                 <label
                   for="exp-month"
                   class="block text-sm font-semibold text-gray-700 py-1.5"
-                  >Expiration Date</label
+                  >EXP.DATE(MM/YY)</label
                 >
                 <div class="flex space-x-2">
                   <input
                     type="text"
-                    class="w-20 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    class="w-20 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
                     id="expiry-month"
                     placeholder="MM"
                   />
                   <input
                     type="text"
-                    class="w-20 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    class="w-20 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
                     id="expiry-year"
                     placeholder="YYYY"
                   />
@@ -96,7 +96,7 @@
                   type="text"
                   id="cvc"
                   name="cvc"
-                  class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
                   placeholder="123"
                   maxlength="3"
                   required
@@ -107,6 +107,7 @@
             <div class="mt-6">
               <button
                 type="submit"
+                id="btn-submit"
                 class="w-full py-3 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
                 Confirm
