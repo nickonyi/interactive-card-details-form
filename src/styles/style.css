@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  border: 1px solid salmon;
+  height: 100vh;
+}
+
+.container div:first-child {
+  border: 1px solid yellow;
+  height: 300px;
+}
+
+.container div:last-child {
+  border: 1px solid saddlebrown;
+}

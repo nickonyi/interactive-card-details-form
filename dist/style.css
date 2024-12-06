@@ -555,12 +555,82 @@ video {
 }
 
 .container {
-  border: 1px solid yellow;
-  height: 100vh;
   width: 100%;
 }
 
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.h-64 {
+  height: 16rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+.bg-hero-pattern {
+  background-image: url('assets/images/bg-main-desktop.png');
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.text-9xl {
+  font-size: 8rem;
+  line-height: 1;
+}
+
+.container {
+  border: 1px solid salmon;
+  height: 100vh;
+}
+
 .container div:first-child {
-  border: 1px solid rgb(255, 72, 0);
+  border: 1px solid yellow;
   height: 300px;
+}
+
+.container div:last-child {
+  border: 1px solid saddlebrown;
 }
