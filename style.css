@@ -604,8 +604,12 @@ video {
   flex: 1 1 0%;
 }
 
-.bg-hero-pattern {
-  background-image: url('assets/images/bg-main-desktop.png');
+.flex-col {
+  flex-direction: column;
+}
+
+.bg-hero-mobile {
+  background-image: url('assets/images/bg-main-mobile.png');
 }
 
 .bg-cover {
@@ -614,11 +618,6 @@ video {
 
 .bg-center {
   background-position: center;
-}
-
-.text-9xl {
-  font-size: 8rem;
-  line-height: 1;
 }
 
 .container {
@@ -633,4 +632,14 @@ video {
 
 .container div:last-child {
   border: 1px solid saddlebrown;
+}
+
+@media (min-width: 640px) {
+  .sm\:flex-row {
+    flex-direction: row;
+  }
+
+  .sm\:bg-hero-desktop {
+    background-image: url('assets/images/bg-main-desktop.png');
+  }
 }
