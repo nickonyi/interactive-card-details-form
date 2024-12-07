@@ -596,56 +596,20 @@ video {
   position: relative;
 }
 
-.left-1\/4 {
-  left: 25%;
+.left-3\/4 {
+  left: 75%;
+}
+
+.left-64 {
+  left: 16rem;
 }
 
 .top-1\/4 {
   top: 25%;
 }
 
-.left-3\/4 {
-  left: 75%;
-}
-
-.top-2\/4 {
-  top: 50%;
-}
-
-.left-1\/2 {
-  left: 50%;
-}
-
-.top-32 {
-  top: 8rem;
-}
-
-.top-64 {
-  top: 16rem;
-}
-
-.top-72 {
-  top: 18rem;
-}
-
 .top-80 {
   top: 20rem;
-}
-
-.left-48 {
-  left: 12rem;
-}
-
-.left-52 {
-  left: 13rem;
-}
-
-.left-60 {
-  left: 15rem;
-}
-
-.left-64 {
-  left: 16rem;
 }
 
 .m-0 {
@@ -668,24 +632,20 @@ video {
   display: flex;
 }
 
-.h-screen {
-  height: 100vh;
-}
-
-.h-20 {
-  height: 5rem;
-}
-
-.h-48 {
-  height: 12rem;
-}
-
-.h-32 {
-  height: 8rem;
-}
-
 .h-36 {
   height: 9rem;
+}
+
+.h-4 {
+  height: 1rem;
+}
+
+.h-8 {
+  height: 2rem;
+}
+
+.h-screen {
+  height: 100vh;
 }
 
 .w-1\/2 {
@@ -696,16 +656,24 @@ video {
   width: 5rem;
 }
 
+.w-4 {
+  width: 1rem;
+}
+
+.w-64 {
+  width: 16rem;
+}
+
+.w-8 {
+  width: 2rem;
+}
+
 .w-96 {
   width: 24rem;
 }
 
 .w-full {
   width: 100%;
-}
-
-.w-64 {
-  width: 16rem;
 }
 
 .flex-1 {
@@ -732,6 +700,10 @@ video {
   justify-content: center;
 }
 
+.gap-2 {
+  gap: 0.5rem;
+}
+
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -744,12 +716,12 @@ video {
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.rounded-md {
-  border-radius: 0.375rem;
+.rounded-full {
+  border-radius: 9999px;
 }
 
-.rounded-sm {
-  border-radius: 0.125rem;
+.rounded-md {
+  border-radius: 0.375rem;
 }
 
 .border {
@@ -766,8 +738,9 @@ video {
   background-color: rgb(59 130 246 / var(--tw-bg-opacity, 1));
 }
 
-.bg-hero-mobile {
-  background-image: url('assets/images/bg-main-mobile.png');
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
 .bg-hero-card-back {
@@ -776,6 +749,10 @@ video {
 
 .bg-hero-card-front {
   background-image: url('assets/images/bg-card-front.png');
+}
+
+.bg-hero-mobile {
+  background-image: url('assets/images/bg-main-mobile.png');
 }
 
 .bg-cover {
@@ -798,6 +775,14 @@ video {
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+
+.pl-8 {
+  padding-left: 2rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
 }
 
 .text-sm {
