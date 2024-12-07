@@ -624,6 +624,66 @@ video {
   top: 4rem;
 }
 
+.left-2 {
+  left: 0.5rem;
+}
+
+.top-32 {
+  top: 8rem;
+}
+
+.top-2 {
+  top: 0.5rem;
+}
+
+.right-2 {
+  right: 0.5rem;
+}
+
+.left-6 {
+  left: 1.5rem;
+}
+
+.left-8 {
+  left: 2rem;
+}
+
+.left-12 {
+  left: 3rem;
+}
+
+.top-12 {
+  top: 3rem;
+}
+
+.left-16 {
+  left: 4rem;
+}
+
+.left-32 {
+  left: 8rem;
+}
+
+.left-36 {
+  left: 9rem;
+}
+
+.left-20 {
+  left: 5rem;
+}
+
+.left-24 {
+  left: 6rem;
+}
+
+.left-4 {
+  left: 1rem;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
 .m-0 {
   margin: 0px;
 }
@@ -666,6 +726,10 @@ video {
 
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mt-20 {
+  margin-top: 5rem;
 }
 
 .block {
@@ -825,6 +889,11 @@ video {
   padding-bottom: 0.75rem;
 }
 
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .pl-8 {
   padding-left: 2rem;
 }
@@ -935,13 +1004,39 @@ body {
 }
 
 @media (min-width: 640px) {
+  .sm\:left-2 {
+    left: 0.5rem;
+  }
+
+  .sm\:w-full {
+    width: 100%;
+  }
+
   .sm\:flex-row {
     flex-direction: row;
   }
 }
 
 @media (min-width: 768px) {
+  .md\:left-3\/4 {
+    left: 75%;
+  }
+
+  .md\:top-80 {
+    top: 20rem;
+  }
+
   .md\:bg-hero-desktop {
     background-image: url('assets/images/bg-main-desktop.png');
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:left-64 {
+    left: 16rem;
+  }
+
+  .lg\:top-1\/4 {
+    top: 25%;
   }
 }
