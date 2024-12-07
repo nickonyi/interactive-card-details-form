@@ -612,6 +612,18 @@ video {
   top: 20rem;
 }
 
+.right-10 {
+  right: 2.5rem;
+}
+
+.top-20 {
+  top: 5rem;
+}
+
+.top-16 {
+  top: 4rem;
+}
+
 .m-0 {
   margin: 0px;
 }
@@ -858,6 +870,10 @@ video {
 
 .font-medium {
   font-weight: 500;
+}
+
+.tracking-wide {
+  letter-spacing: 0.025em;
 }
 
 .text-gray-700 {

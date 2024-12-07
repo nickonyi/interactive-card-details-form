@@ -36,17 +36,24 @@
               0000 0000 0000 000
             </p>
           </div>
-          <!--Card name and cvc information-->
+          <!--Card name and expiry date information-->
           <div
             class="card-info-container text-white flex pl-6 mt-2 justify-between"
           >
             <p id="card-name" class="text-xs">Jane Appleseed</p>
-            <p id="cvc-info" class="text-xs pr-4">00/00</p>
+            <p id="exp-info" class="text-xs pr-4">00/00</p>
           </div>
         </div>
         <div
-          class="absolute top-80 left-3/4 rounded-md bg-hero-card-back h-36 w-64 bg-cover bg-center"
-        ></div>
+          class="absolute top-80 left-3/4 rounded-md bg-hero-card-back h-36 w-64 bg-cover bg-center relative"
+        >
+          <p
+            id="cvc-info"
+            class="text-white absolute top-16 right-10 text-xs tracking-wide"
+          >
+            123
+          </p>
+        </div>
       </div>
       <div class="flex-3 basis-2/3 flex items-center justify-center">
         <div class="card-holder-container w-96">
