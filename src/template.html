@@ -21,10 +21,10 @@
   <body class="m-0">
     <div class="container flex h-screen flex-col sm:flex-row w-full">
       <div
-        class="bg-hero-mobile md:bg-hero-desktop h-100 bg-cover bg-center flex-1 basis-1/3 relative"
+        class="bg-hero-mobile w-full md:bg-hero-desktop h-100 bg-cover bg-center flex-1 basis-1/3 relative"
       >
         <div
-          class="absolute top-1/4 left-64 rounded-md bg-hero-card-front h-36 w-64 bg-cover bg-center"
+          class="absolute top-32 left-4 z-10 lg:top-1/4 lg:left-64 rounded-md bg-hero-card-front h-36 w-64 bg-cover bg-center left-2"
         >
           <div class="circle-containers flex gap-2 bore pt-4 pl-8 items-center">
             <div class="bg-white rounded-full h-8 w-8"></div>
@@ -45,7 +45,7 @@
           </div>
         </div>
         <div
-          class="absolute top-80 left-3/4 rounded-md bg-hero-card-back h-36 w-64 bg-cover bg-center relative"
+          class="absolute top-12 left-24 md:top-80 md:left-3/4 rounded-md bg-hero-card-back h-36 w-64 bg-cover bg-center relative"
         >
           <p
             id="cvc-info"
@@ -57,7 +57,7 @@
       </div>
       <div class="flex-3 basis-2/3 flex items-center justify-center">
         <div class="card-holder-container w-96">
-          <form>
+          <form class="px-6 mt-20">
             <!-- Cardholder Name -->
             <div class="mb-4">
               <label
