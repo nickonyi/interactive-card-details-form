@@ -9,6 +9,9 @@ module.exports = {
         'hero-card-front': "url('assets/images/bg-card-front.png')",
         'hero-card-back': "url('assets/images/bg-card-back.png')",
       },
+      border: {
+        '1p': '1px',
+      },
     },
   },
   plugins: [],
