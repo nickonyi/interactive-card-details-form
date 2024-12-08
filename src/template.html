@@ -57,7 +57,7 @@
       </div>
       <div class="flex-3 basis-2/3 flex items-center justify-center">
         <div class="card-holder-container w-96 pb-12">
-          <form class="px-6 mt-20">
+          <form id="form" class="px-6 mt-20">
             <!-- Cardholder Name -->
             <div class="mb-4">
               <label
@@ -71,7 +71,6 @@
                 name="cardholder-name"
                 class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
                 placeholder="e.g. Jane Appleseed"
-                required
               />
             </div>
 
@@ -89,8 +88,8 @@
                 class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
                 placeholder="e.g. 1234 5678 9123 0000"
                 maxlength="19"
-                required
               />
+              <span id="cardError" class="pt-4"></span>
             </div>
 
             <!-- Expiration Date -->
@@ -108,12 +107,14 @@
                     id="expiry-month"
                     placeholder="MM"
                   />
+                  <span id="cardError" class="error"></span>
                   <input
                     type="text"
                     class="w-20 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
                     id="expiry-year"
                     placeholder="YY"
                   />
+                  <span id="cardError" class="error"></span>
                 </div>
               </div>
 
@@ -131,8 +132,8 @@
                   class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
                   placeholder="e.g.123"
                   maxlength="3"
-                  required
                 />
+                <span id="cardError" class="error"></span>
               </div>
             </div>
             <!-- Confirm Button -->
