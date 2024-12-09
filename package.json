@@ -8,7 +8,7 @@
     "build": "webpack --config webpack.prod.js",
     "build:css": "tailwind build src/styles/style.css -o dist/style.css",
     "watch:css": "npx tailwindcss src/styles/style.css -o dist/style.css --watch",
-    "commit": "git commit -m'HTML and CSS setup'",
+    "commit": "git commit -m'JS logic'",
     "push": "git push origin main"
   },
   "keywords": [],
