@@ -50,6 +50,13 @@ const validateForm = (e) => {
   } else {
     expYearError.textContent = '';
   }
+
+  if (cvcNo.value === '') {
+    cvcError.textContent = "Can't be blank";
+    cvcError.classList.add('pt-2', 'text-red-600', 'text-xs');
+  } else {
+    cvcError.textContent = '';
+  }
 };
 
 form.addEventListener('submit', validateForm);
