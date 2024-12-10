@@ -13,6 +13,8 @@ const cvcError = document.querySelector('#cvc-error');
 const cardName = document.querySelector('#card-name');
 const expInfo = document.querySelector('#exp-info');
 const cvcInfo = document.querySelector('#cvc-info');
+const cardComplete = document.querySelector('.card-complete');
+const btnContinue = document.querySelector('#btn-continue');
 
 cardNumber.addEventListener('input', (e) => {
   const input = e.target;
@@ -33,16 +35,18 @@ cvcNo.addEventListener('input', (e) => {
 
 const validateForm = (e) => {
   e.preventDefault();
-
   const isNumber = /^[\d\s]+$/;
+  let isValid = true;
 
   if (cardNumber.value === '') {
     cardNumberError.textContent = "Can't be blank";
     cardNumberError.classList.add('pt-8', 'text-red-600', 'text-xs');
+    isValid = false;
   } else {
     if (!isNumber.test(cardNumber.value)) {
       cardNumberError.textContent = 'Wrong format, numbers only!';
       cardNumberError.classList.add('pt-2', 'text-red-600', 'text-xs');
+      isValid = false;
     } else {
       cardNumberError.textContent = '';
     }
@@ -51,6 +55,7 @@ const validateForm = (e) => {
   if (expMonth.value === '') {
     expMonthError.textContent = "Can't be blank";
     expMonthError.classList.add('pt-2', 'text-red-600', 'text-xxs');
+    isValid = false;
   } else {
     expMonthError.textContent = '';
   }
@@ -58,6 +63,7 @@ const validateForm = (e) => {
   if (expYear.value === '') {
     expYearError.textContent = "Can't be blank";
     expYearError.classList.add('pt-2', 'text-red-600', 'text-xxs');
+    isValid = false;
   } else {
     expYearError.textContent = '';
   }
@@ -65,8 +71,14 @@ const validateForm = (e) => {
   if (cvcNo.value === '') {
     cvcError.textContent = "Can't be blank";
     cvcError.classList.add('pt-2', 'text-red-600', 'text-xs');
+    isValid = false;
   } else {
     cvcError.textContent = '';
+  }
+
+  if (isValid) {
+    form.style.display = 'none';
+    cardComplete.style.display = 'block';
   }
 };
 
@@ -79,3 +91,8 @@ const updateCardExpiry = () => {
 form.addEventListener('submit', validateForm);
 expMonth.addEventListener('input', updateCardExpiry);
 expYear.addEventListener('input', updateCardExpiry);
+btnContinue.addEventListener('click', () => {
+  form.reset();
+  form.style.display = 'block';
+  cardComplete.style.display = 'none';
+});

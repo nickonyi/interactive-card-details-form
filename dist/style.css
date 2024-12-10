@@ -863,6 +863,10 @@ video {
   padding-top: 2rem;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -946,6 +950,10 @@ body {
 }
 
 form {
+  display: block;
+}
+
+.card-complete {
   display: none;
 }
 
