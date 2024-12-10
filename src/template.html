@@ -56,7 +56,7 @@
         </div>
       </div>
       <div class="flex-3 basis-2/3 flex items-center justify-center">
-        <div class="card-holder-container w-96 pb-12">
+        <div class="card-holder-container w-96 pb-12 lg:pt-4">
           <form id="form" class="px-6 mt-20">
             <!-- Cardholder Name -->
             <div class="mb-4">
@@ -154,6 +154,22 @@
               </button>
             </div>
           </form>
+          <!-- When Validation goes through-->
+          <div class="card-complete flex flex-col items-center">
+            <img
+              class="h-20 w-20"
+              src="../assets/images/icon-complete.svg"
+              alt=""
+            />
+            <h1 class="text-big tracking-wider">THANK YOU!</h1>
+            <p class="text-gray-500 text-sm">We have added your card details</p>
+            <button
+              id="btn-continue"
+              class="w-72 py-12 mt-12 text-white font-semibold rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              Continue
+            </button>
+          </div>
         </div>
       </div>
     </div>
