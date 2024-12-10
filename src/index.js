@@ -12,6 +12,7 @@ const expYearError = document.querySelector('#exp-year-error');
 const cvcError = document.querySelector('#cvc-error');
 const cardName = document.querySelector('#card-name');
 const expInfo = document.querySelector('#exp-info');
+const cvcInfo = document.querySelector('#cvc-info');
 
 cardNumber.addEventListener('input', (e) => {
   const input = e.target;
@@ -27,7 +28,7 @@ cardHolderName.addEventListener('input', (e) => {
 
 cvcNo.addEventListener('input', (e) => {
   const value = e.target.value;
-  expInfo.textContent = value;
+  cvcInfo.textContent = value;
 });
 
 const validateForm = (e) => {
@@ -69,4 +70,12 @@ const validateForm = (e) => {
   }
 };
 
+const updateCardExpiry = () => {
+  const month = expMonth.value.padStart(2, '0');
+  const year = expYear.value.padStart(2, '0');
+  expInfo.textContent = `${month || 'MM'}/${year || 'YY'}`;
+};
+
 form.addEventListener('submit', validateForm);
+expMonth.addEventListener('input', updateCardExpiry);
+expYear.addEventListener('input', updateCardExpiry);
