@@ -10,26 +10,36 @@ const cardNumberError = document.querySelector('#card-number-error');
 const expMonthError = document.querySelector('#exp-month-error');
 const expYearError = document.querySelector('#exp-year-error');
 const cvcError = document.querySelector('#cvc-error');
+const cardName = document.querySelector('#card-name');
+const expInfo = document.querySelector('#exp-info');
 
 cardNumber.addEventListener('input', (e) => {
   const input = e.target;
   let inputValue = input.value.replace(/\s/g, '');
   const formattedValue = inputValue.replace(/(.{4})/g, '$1 ');
-  input.value = formattedValue;
+  input.value = formattedValue.trim();
+});
+
+cardHolderName.addEventListener('input', (e) => {
+  const value = e.target.value;
+  cardName.textContent = value;
+});
+
+cvcNo.addEventListener('input', (e) => {
+  const value = e.target.value;
+  expInfo.textContent = value;
 });
 
 const validateForm = (e) => {
   e.preventDefault();
 
-  const isNumber = /^\d+$/;
-
-  console.log(cardNumber.value);
+  const isNumber = /^[\d\s]+$/;
 
   if (cardNumber.value === '') {
     cardNumberError.textContent = "Can't be blank";
     cardNumberError.classList.add('pt-8', 'text-red-600', 'text-xs');
   } else {
-    if (!isNumber.test(cardNumber.textContent)) {
+    if (!isNumber.test(cardNumber.value)) {
       cardNumberError.textContent = 'Wrong format, numbers only!';
       cardNumberError.classList.add('pt-2', 'text-red-600', 'text-xs');
     } else {
