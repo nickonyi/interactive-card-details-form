@@ -29,7 +29,6 @@ Users should be able to:
 
 ### Screenshot
 
-![](./assets/images/screenshot.png)
 ![](./assets/images/mobile_sc.png)
 
 ### Links
