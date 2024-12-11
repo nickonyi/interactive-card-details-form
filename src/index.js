@@ -16,13 +16,34 @@ const cvcInfo = document.querySelector('#cvc-info');
 const cardComplete = document.querySelector('.card-complete');
 const btnContinue = document.querySelector('#btn-continue');
 const ccNumber = document.querySelector('#cc-number');
+let isValid = true;
+let cvcValid = true;
+let cardValid = true;
 
-cardNumber.addEventListener('input', (e) => {
+const getCardNumber = (e) => {
   const input = e.target;
   let inputValue = input.value.replace(/\s/g, '');
   const formattedValue = inputValue.replace(/(.{4})/g, '$1 ');
-  input.value = formattedValue.trim();
-  ccNumber.textContent = input.value;
+  return (input.value = formattedValue.trim());
+};
+
+cardNumber.addEventListener('input', (e) => {
+  const cardNumber = getCardNumber(e);
+  ccNumber.textContent = cardNumber;
+});
+
+cardNumber.addEventListener('blur', (e) => {
+  const cardNumber = e.target.value.replace(/\s+/g, '');
+
+  if (cardNumber.length !== 16) {
+    cardNumberError.textContent =
+      'Please enter 16 digits for your credit card!!';
+    cardNumberError.classList.add('text-red-500', 'text-xxs', 'pt-2');
+    cardValid = false;
+  } else {
+    cardNumberError.textContent = '';
+    cardValid = true;
+  }
 });
 
 cardHolderName.addEventListener('input', (e) => {
@@ -32,13 +53,20 @@ cardHolderName.addEventListener('input', (e) => {
 
 cvcNo.addEventListener('input', (e) => {
   const value = e.target.value;
-  cvcInfo.textContent = value;
+
+  if (value.length === 3) {
+    cvcInfo.textContent = value;
+    cvcValid = true;
+  } else {
+    cvcError.textContent = 'Please enter 3 digits for cvc';
+    cvcError.classList.add('pt-2', 'text-red-600', 'text-xxs');
+    cvcValid = false;
+  }
 });
 
 const validateForm = (e) => {
   e.preventDefault();
   const isNumber = /^[\d\s]+$/;
-  let isValid = true;
 
   if (cardNumber.value === '') {
     cardNumberError.textContent = "Can't be blank";
@@ -78,6 +106,14 @@ const validateForm = (e) => {
     cvcError.textContent = '';
   }
 
+  if (!cardValid || !cvcValid) {
+    isValid = false;
+  } else {
+    isValid = true;
+  }
+
+  console.log(isValid);
+
   if (isValid) {
     form.style.display = 'none';
     cardComplete.style.display = 'block';
@@ -85,8 +121,8 @@ const validateForm = (e) => {
 };
 
 const updateCardExpiry = () => {
-  const month = expMonth.value.padStart(2, '0');
-  const year = expYear.value.padStart(2, '0');
+  const month = expMonth.value.slice(0, 2);
+  const year = expYear.value.slice(0, 2);
   expInfo.textContent = `${month || 'MM'}/${year || 'YY'}`;
 };
 
