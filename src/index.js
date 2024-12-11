@@ -15,12 +15,14 @@ const expInfo = document.querySelector('#exp-info');
 const cvcInfo = document.querySelector('#cvc-info');
 const cardComplete = document.querySelector('.card-complete');
 const btnContinue = document.querySelector('#btn-continue');
+const ccNumber = document.querySelector('#cc-number');
 
 cardNumber.addEventListener('input', (e) => {
   const input = e.target;
   let inputValue = input.value.replace(/\s/g, '');
   const formattedValue = inputValue.replace(/(.{4})/g, '$1 ');
   input.value = formattedValue.trim();
+  ccNumber.textContent = input.value;
 });
 
 cardHolderName.addEventListener('input', (e) => {

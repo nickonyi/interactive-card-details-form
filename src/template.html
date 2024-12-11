@@ -32,7 +32,7 @@
           </div>
           <!--Card number-->
           <div class="card-number">
-            <p class="text-white mt-8 ml-6 text-lg font-medium">
+            <p id="cc-number" class="text-white mt-8 ml-6 text-lg font-medium">
               0000 0000 0000 000
             </p>
           </div>
@@ -104,7 +104,7 @@
                 <div class="flex space-x-2">
                   <div class="flex flex-col">
                     <input
-                      type="text"
+                      type="number"
                       class="w-20 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
                       id="expiry-month"
                       placeholder="MM"
@@ -114,7 +114,7 @@
                   </div>
                   <div class="flex flex-col">
                     <input
-                      type="text"
+                      type="number"
                       class="w-20 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
                       id="expiry-year"
                       placeholder="YY"
@@ -133,7 +133,7 @@
                   >CVC</label
                 >
                 <input
-                  type="text"
+                  type="number"
                   id="cvc"
                   name="cvc"
                   class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
