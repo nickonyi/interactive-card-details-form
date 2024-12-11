@@ -29,7 +29,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](./assets/images/mobile_sc.png){:style="max-width: 400px; width: 100%"}
+![](./assets/images/screenshot.png)
+![](./assets/images/mobile_sc.png)
 
 ### Links
 
