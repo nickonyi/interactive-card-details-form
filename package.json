@@ -7,6 +7,7 @@
     "dev": "webpack serve --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "build:css": "tailwind build src/styles/style.css -o dist/style.css",
+    "deploy": "git subtree push --prefix dist origin gh-pages",
     "watch:css": "npx tailwindcss src/styles/style.css -o dist/style.css --watch",
     "commit": "git commit -m'Documentation'",
     "push": "git push origin main"
