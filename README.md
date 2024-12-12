@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution URL](https://github.com/nickonyi/interactive-card-details-form.git)
+- Live Site URL: [Live site URL](https://nickonyi.github.io/interactive-card-details-form/)
 
 ### Built with
 
@@ -63,6 +63,4 @@ Server-side validation ensures that form inputs are securely and reliably valida
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - [@nickonyi](https://www.frontendmentor.io/profile/nickonyi)
